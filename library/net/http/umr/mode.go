@@ -1,18 +1,14 @@
-// Copyright 2014 Manu Martinez-Almeida.  All rights reserved.
-// Use of this source code is governed by a MIT style
-// license that can be found in the LICENSE file.
-
-package gin
+package umr
 
 import (
 	"io"
 	"os"
 
-	"github.com/gin-gonic/gin/binding"
+	"go-common/library/net/http/umr/binding"
 )
 
 // EnvGinMode indicates environment name for gin mode.
-const EnvGinMode = "GIN_MODE"
+const EnvGinMode = "UMR_MODE"
 
 const (
 	// DebugMode indicates gin mode is debug.

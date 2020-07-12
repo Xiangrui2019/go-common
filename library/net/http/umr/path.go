@@ -1,23 +1,5 @@
-// Copyright 2013 Julien Schmidt. All rights reserved.
-// Based on the path package, Copyright 2009 The Go Authors.
-// Use of this source code is governed by a BSD-style license that can be found
-// at https://github.com/julienschmidt/httprouter/blob/master/LICENSE.
+package umr
 
-package gin
-
-// cleanPath is the URL version of path.Clean, it returns a canonical URL path
-// for p, eliminating . and .. elements.
-//
-// The following rules are applied iteratively until no further processing can
-// be done:
-//	1. Replace multiple slashes with a single slash.
-//	2. Eliminate each . path name element (the current directory).
-//	3. Eliminate each inner .. path name element (the parent directory)
-//	   along with the non-.. element that precedes it.
-//	4. Eliminate .. elements that begin a rooted path:
-//	   that is, replace "/.." by "/" at the beginning of a path.
-//
-// If the result of this process is an empty string, "/" is returned.
 func cleanPath(p string) string {
 	const stackBufSize = 128
 	// Turn empty string into "/"
@@ -51,11 +33,6 @@ func cleanPath(p string) string {
 	}
 
 	trailing := n > 1 && p[n-1] == '/'
-
-	// A bit more clunky without a 'lazybuf' like the path package, but the loop
-	// gets completely inlined (bufApp calls).
-	// loop has no expensive function calls (except 1x make)		// So in contrast to the path package this loop has no expensive function
-	// calls (except make, if needed).
 
 	for r < n {
 		switch {

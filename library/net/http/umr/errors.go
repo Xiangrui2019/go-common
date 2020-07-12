@@ -1,15 +1,11 @@
-// Copyright 2014 Manu Martinez-Almeida.  All rights reserved.
-// Use of this source code is governed by a MIT style
-// license that can be found in the LICENSE file.
-
-package gin
+package umr
 
 import (
 	"fmt"
 	"reflect"
 	"strings"
 
-	"github.com/gin-gonic/gin/internal/json"
+	"go-common/library/net/http/umr/internal/json"
 )
 
 // ErrorType is an unsigned 64-bit error code as defined in the gin spec.

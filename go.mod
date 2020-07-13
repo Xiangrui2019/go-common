@@ -3,8 +3,9 @@ module go-common
 go 1.14
 
 require (
-	github.com/davecgh/go-spew v1.1.1 // indirect
+	github.com/gin-contrib/cors v1.3.1 // indirect
 	github.com/gin-contrib/sse v0.1.0
+	github.com/gin-gonic/gin v1.5.0
 	github.com/go-playground/validator/v10 v10.2.0
 	github.com/go-sql-driver/mysql v1.5.0
 	github.com/golang/protobuf v1.3.3

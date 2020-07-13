@@ -61,7 +61,7 @@ func ConfigMap(id int64) (*models.ConfigMap, error) {
 }
 
 // 列出配置表
-func ConfigMaps() (*[]models.ConfigMap, error) {
+func ConfigMaps() ([]models.ConfigMap, error) {
 	var config_maps []models.ConfigMap
 	sql := `SELECT * FROM t_config_map`
 
@@ -70,5 +70,5 @@ func ConfigMaps() (*[]models.ConfigMap, error) {
 		return nil, errors.Wrap(err, "get configmaps error.")
 	}
 
-	return &config_maps, nil
+	return config_maps, nil
 }

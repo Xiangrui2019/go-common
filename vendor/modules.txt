@@ -18,6 +18,9 @@ github.com/go-playground/validator/v10
 # github.com/golang/protobuf v1.3.3
 ## explicit
 github.com/golang/protobuf/proto
+# github.com/joho/godotenv v1.3.0
+## explicit
+github.com/joho/godotenv
 # github.com/json-iterator/go v1.1.7
 github.com/json-iterator/go
 # github.com/kr/pretty v0.2.0

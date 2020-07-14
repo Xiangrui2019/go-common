@@ -16,5 +16,4 @@ type GetConfigMapDto struct {
 	Description string
 	CreatedAt   time.Time
 	UpdatedAt   time.Time
-	DeletedAt   time.Time
 }

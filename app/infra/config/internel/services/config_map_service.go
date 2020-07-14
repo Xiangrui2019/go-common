@@ -34,7 +34,6 @@ func (service *ConfigMapService) CreateConfigMap(ctx context.Context, args *requ
 		Description: config_map.Description,
 		CreatedAt:   config_map.CreatedAt,
 		UpdatedAt:   config_map.UpdatedAt,
-		DeletedAt:   config_map.DeletedAt,
 	}
 	reply.Details = "创建配置组成功."
 
@@ -53,10 +52,13 @@ func (service *ConfigMapService) GetConfigMaps(ctx context.Context, args *reques
 		return err
 	}
 
-	for v := range config_maps {
+	for _, v := range config_maps {
 		config_map_dto = append(config_map_dto, &rep.GetConfigMapDto{
 			Name:        v.Name,
 			Description: v.Description,
+			ID:          v.ID,
+			CreatedAt:   v.CreatedAt,
+			UpdatedAt:   v.UpdatedAt,
 		})
 	}
 
@@ -88,5 +90,5 @@ func (service *ConfigMapService) UpdateConfigMap(ctx context.Context, args *requ
 	return nil
 }
 
-func (service *ConfigMapService) DeleteConfigMap() error {
+func (service *ConfigMapService) DeleteConfigMap(ctx context.Context, args *request.DeleteConfigMapRequest, reply rep.DeleteConfigMapReply) error {
 }

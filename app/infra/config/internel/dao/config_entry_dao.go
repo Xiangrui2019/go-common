@@ -30,7 +30,7 @@ func ConfigEntrysByMapId(configmap_id uint) ([]*models.ConfigEntry, error) {
 
 // 更新配置项
 func UpdateConfigEntry(config_entry *models.ConfigEntry) error {
-	if err := database.DB.Save(&config_entry); err != nil {
+	if err := database.DB.Save(&config_entry).Error; err != nil {
 		return errors.Wrap(err, "Update a config_entry had an exception.")
 	}
 

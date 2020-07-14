@@ -31,13 +31,13 @@ func ConfigMaps() ([]*models.ConfigMap, error) {
 
 // 通过id获取一个ConfigMap
 func ConfigMap(id uint) (*models.ConfigMap, error) {
-	configmap := *models.ConfigMap{}
+	configmap := models.ConfigMap{}
 
 	if err := database.DB.First(&configmap).Error; err != nil {
 		return nil, errors.Wrap(err, "Getting a config_map had an exception.")
 	}
 
-	return configmap, nil
+	return &configmap, nil
 }
 
 // 更新ConfigMap

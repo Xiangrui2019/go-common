@@ -23,4 +23,6 @@ func ConnectDatabase(connectionString string, timeout int64) error {
 	DB.DB().SetConnMaxLifetime(time.Second * time.Duration(timeout))
 
 	MigrationDatabase()
+
+	return nil
 }

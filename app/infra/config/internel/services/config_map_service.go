@@ -91,4 +91,18 @@ func (service *ConfigMapService) UpdateConfigMap(ctx context.Context, args *requ
 }
 
 func (service *ConfigMapService) DeleteConfigMap(ctx context.Context, args *request.DeleteConfigMapRequest, reply rep.DeleteConfigMapReply) error {
+	err := dao.DeleteConfigMap(args.ID)
+	if err != nil {
+		reply.ErrorCode = ecode.ServerException
+		reply.Message = ""
+		reply.Details = "删除配置表失败."
+
+		return err
+	}
+
+	reply.ErrorCode = ecode.OK
+	reply.Message = ""
+	reply.Details = "成功删除配置表."
+
+	return nil
 }

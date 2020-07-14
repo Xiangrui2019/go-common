@@ -1,3 +1,5 @@
+# github.com/apache/thrift v0.13.0
+github.com/apache/thrift/lib/go/thrift
 # github.com/gin-contrib/sse v0.1.0
 ## explicit
 github.com/gin-contrib/sse
@@ -17,6 +19,10 @@ github.com/go-playground/universal-translator
 github.com/go-playground/validator/v10
 # github.com/go-sql-driver/mysql v1.5.0
 github.com/go-sql-driver/mysql
+# github.com/gogo/protobuf v1.2.0
+github.com/gogo/protobuf/proto
+# github.com/golang/groupcache v0.0.0-20190702054246-869f871628b6
+github.com/golang/groupcache/lru
 # github.com/golang/protobuf v1.3.3
 ## explicit
 github.com/golang/protobuf/proto
@@ -31,29 +37,53 @@ github.com/jinzhu/inflection
 github.com/joho/godotenv
 # github.com/json-iterator/go v1.1.7
 github.com/json-iterator/go
-# github.com/kr/pretty v0.2.0
-## explicit
 # github.com/leodido/go-urn v1.2.0
 github.com/leodido/go-urn
 # github.com/mattn/go-isatty v0.0.12
 ## explicit
 github.com/mattn/go-isatty
 # github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd
-## explicit
 github.com/modern-go/concurrent
 # github.com/modern-go/reflect2 v1.0.1
-## explicit
 github.com/modern-go/reflect2
+# github.com/opentracing/opentracing-go v1.1.0
+github.com/opentracing/opentracing-go
+github.com/opentracing/opentracing-go/log
 # github.com/pkg/errors v0.9.1
 ## explicit
 github.com/pkg/errors
+# github.com/smallnest/rpcx v0.0.0-20200714114247-35b07de0def7
+## explicit
+github.com/smallnest/rpcx/codec
+github.com/smallnest/rpcx/protocol
+github.com/smallnest/rpcx/share
+github.com/smallnest/rpcx/util
 # github.com/ugorji/go/codec v1.1.7
 ## explicit
 github.com/ugorji/go/codec
+# github.com/vmihailenco/msgpack v4.0.4+incompatible
+github.com/vmihailenco/msgpack
+github.com/vmihailenco/msgpack/codes
+# go.opencensus.io v0.22.3
+go.opencensus.io
+go.opencensus.io/internal
+go.opencensus.io/trace
+go.opencensus.io/trace/internal
+go.opencensus.io/trace/tracestate
+# golang.org/x/net v0.0.0-20200324143707-d3edc9973b7e
+golang.org/x/net/context
 # golang.org/x/sys v0.0.0-20200323222414-85ca7c5b95cd
 golang.org/x/sys/unix
-# gopkg.in/check.v1 v1.0.0-20190902080502-41f04d3bba15
-## explicit
+# google.golang.org/appengine v1.4.0
+google.golang.org/appengine
+google.golang.org/appengine/datastore
+google.golang.org/appengine/internal
+google.golang.org/appengine/internal/app_identity
+google.golang.org/appengine/internal/base
+google.golang.org/appengine/internal/datastore
+google.golang.org/appengine/internal/log
+google.golang.org/appengine/internal/modules
+google.golang.org/appengine/internal/remote_api
 # gopkg.in/go-playground/validator.v9 v9.29.1
 gopkg.in/go-playground/validator.v9
 # gopkg.in/yaml.v2 v2.2.8

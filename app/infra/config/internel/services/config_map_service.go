@@ -40,7 +40,7 @@ func (service *ConfigMapService) CreateConfigMap(ctx context.Context, args *requ
 	return nil
 }
 
-func (service *ConfigMapService) GetConfigMaps(ctx context.Context, args *request.GetConfigMapsRequest, reply rep.GetConfigMapsReply) error {
+func (service *ConfigMapService) GetConfigMaps(ctx context.Context, args *request.GetConfigMapsRequest, reply *rep.GetConfigMapsReply) error {
 	var config_map_dto []*rep.GetConfigMapDto
 	config_maps, err := dao.ConfigMaps()
 
@@ -70,7 +70,7 @@ func (service *ConfigMapService) GetConfigMaps(ctx context.Context, args *reques
 	return nil
 }
 
-func (service *ConfigMapService) UpdateConfigMap(ctx context.Context, args *request.UpdateConfigMapRequest, reply rep.UpdateConfigMapReply) error {
+func (service *ConfigMapService) UpdateConfigMap(ctx context.Context, args *request.UpdateConfigMapRequest, reply *rep.UpdateConfigMapReply) error {
 	config_map := &models.ConfigMap{}
 	config_map.ID = args.ID
 	config_map.Name = args.Name
@@ -90,7 +90,7 @@ func (service *ConfigMapService) UpdateConfigMap(ctx context.Context, args *requ
 	return nil
 }
 
-func (service *ConfigMapService) DeleteConfigMap(ctx context.Context, args *request.DeleteConfigMapRequest, reply rep.DeleteConfigMapReply) error {
+func (service *ConfigMapService) DeleteConfigMap(ctx context.Context, args *request.DeleteConfigMapRequest, reply *rep.DeleteConfigMapReply) error {
 	err := dao.DeleteConfigMap(args.ID)
 	if err != nil {
 		reply.ErrorCode = ecode.ServerException

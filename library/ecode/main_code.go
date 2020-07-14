@@ -12,4 +12,6 @@ var (
 	ServerException = New(-2)
 	// 服务器数据库操作性异常
 	DatabaseException = New(-3)
+	// 客户端数据授权异常
+	UnauthorizedException = New(-4)
 )

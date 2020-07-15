@@ -1,0 +1,5 @@
+package orm
+
+func MigrationDatabase() {
+
+}

@@ -11,7 +11,7 @@ type User struct {
 	// 昵称
 	NikeName string
 	// 用户名
-	Username string
+	UserName string
 	// 简介
 	Bio string
 	// 性别([x]迪诺)

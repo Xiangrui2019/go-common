@@ -21,7 +21,7 @@ type UserDto struct {
 }
 
 // Map *models.User to *dto.UserDto Model
-func AutoMapper(user *models.User) *UserDto {
+func AutoMapperUserDto(user *models.User) *UserDto {
 	return &UserDto{
 		ID:                   user.ID,
 		NikeName:             user.NikeName,

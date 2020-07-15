@@ -14,4 +14,6 @@ var (
 	DatabaseException = New(-3)
 	// 客户端数据授权异常
 	UnauthorizedException = New(-4)
+	// 客户端输入异常
+	ClientInputException = New(-5)
 )

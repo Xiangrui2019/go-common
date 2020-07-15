@@ -1,5 +1,0 @@
-package orm
-
-func MigrationDatabase() {
-
-}
